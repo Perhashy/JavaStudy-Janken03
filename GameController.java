@@ -34,12 +34,19 @@ public class GameController {
     System.out.print("(1：はい、2：いいえ)：");
     try {
       nextGame = sc.nextInt();
-      System.out.println(nextGame);
     } catch (InputMismatchException e) {
       System.out.println("--------------------------------");
       System.out.println("ゲームを終了します");
       System.out.println("また遊んでね！");
       System.exit(0);
+    }
+  }
+  public static boolean checkNext() {
+    if (nextGame == 1) {
+      gameCount ++;
+      return true;
+    } else {
+      return false;
     }
   }
 }
