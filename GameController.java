@@ -9,9 +9,11 @@ public class GameController {
 
   public static void game(Hand player, Hand computer) {
     System.out.println(gameCount + "回目のゲーム！");
+
     player.setPlayerHand();
     computer.setComputerHand();
-    System.out.println(player.getHand());
-    System.out.println(computer.getHand());
+
+    System.out.println("あなた：" + player.stringHand());
+    System.out.println("あいて：" +computer.stringHand());
   }
 }

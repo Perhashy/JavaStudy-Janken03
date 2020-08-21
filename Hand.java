@@ -36,4 +36,13 @@ public class Hand {
   public int getHand() {
     return this.hand;
   }
+
+  public String stringHand() {
+    switch (this.hand) {
+      case 1: return "グー";
+      case 2: return "チョキ";
+      case 3: return "パー";
+    }
+    return "問題が発生しました";
+  }
 }
