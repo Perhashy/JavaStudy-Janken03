@@ -25,6 +25,9 @@ public class Hand {
       System.out.println("数値以外が入力されました、ゲームを終了します");
       System.exit(0);
     }
+  }
 
+  public int getHand() {
+    return this.hand;
   }
 }
