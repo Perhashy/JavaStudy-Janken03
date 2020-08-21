@@ -2,6 +2,7 @@ package Janken03;
 
 import java.util.Scanner;
 import java.util.InputMismatchException;
+import java.util.Random;
 
 public class Hand {
   private int hand;
@@ -25,6 +26,11 @@ public class Hand {
       System.out.println("数値以外が入力されました、ゲームを終了します");
       System.exit(0);
     }
+  }
+
+  public void setComputerHand() {
+    Random random = new Random();
+    this.hand = random.nextInt(3) + 1;
   }
 
   public int getHand() {
