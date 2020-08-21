@@ -17,5 +17,6 @@ public class GameController {
       System.out.println("あなた：" + player.stringHand());
       System.out.println("あいて：" +computer.stringHand());
     } while (Rule.draw(player.getHand(), computer.getHand()));
+    Rule.result(player.getHand(), computer.getHand());
   }
 }
