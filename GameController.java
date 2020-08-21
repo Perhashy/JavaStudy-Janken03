@@ -7,7 +7,8 @@ public class GameController {
   protected static int gameCount = 1;
   protected static int nextGame;
 
-  public static void game() {
+  public static void game(Hand player, Hand computer) {
     System.out.println(gameCount + "回目のゲーム！");
+    player.setPlayerHand();
   }
 }
