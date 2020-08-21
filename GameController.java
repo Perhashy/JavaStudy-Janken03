@@ -11,6 +11,7 @@ public class GameController {
   protected static int nextGame;
 
   public static void game(Hand player, Hand computer) {
+    System.out.println("================================");
     System.out.println(gameCount + "回目のゲーム！");
 
     do {
