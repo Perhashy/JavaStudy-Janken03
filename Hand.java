@@ -12,7 +12,12 @@ public class Hand {
     System.out.print("(1：グー、2：チョキ、3：パー)：");
     int playerHand = sc.nextInt();
     System.out.println("--------じゃんけんぽん！--------");
-    System.out.println(playerHand);
+    if (playerHand > 0 && playerHand <= 3) {
+      this.hand = playerHand;
+    } else {
+      System.out.println("正しくない手を出しました、あなたの負けです");
+      System.exit(0);
+    }
 
   }
 }
