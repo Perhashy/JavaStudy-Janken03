@@ -1,5 +1,7 @@
 package Janken03;
 
+import java.util.Scanner;
+
 public class GameController {
   protected static int winCount = 0;
   protected static int loseCount = 0;
@@ -22,6 +24,14 @@ public class GameController {
     System.out.println("勝ち：" + winCount + "回");
     System.out.println("負け：" + loseCount + "回");
     System.out.println("引き分け：" + drawCount + "回");
-    
+  }
+
+  public static void nextGame() {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("--------------------------------");
+    System.out.println("もう一度遊びますか？");
+    System.out.print("(1：はい、2：いいえ)：");
+    nextGame = sc.nextInt();
+    System.out.println(nextGame);
   }
 }

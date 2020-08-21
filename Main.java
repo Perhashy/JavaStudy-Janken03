@@ -8,5 +8,6 @@ public class Main {
     System.out.println("じゃんけんを始めます！");
     System.out.println("--------------------------------");
     GameController.game(player, computer);
+    GameController.nextGame();
   }
 }
