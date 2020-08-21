@@ -19,7 +19,11 @@ public class Rule {
           System.out.println("おめでとう！あなたの勝ちです！");
     } else {
       GameController.loseCount ++;
-      System.out.println("残念！あなたの負けです");
+      if (player != 0) {
+        System.out.println("残念！あなたの負けです");
+      } else {
+        System.out.println("正しくない手を出しました。あなたの負けです");
+      }
     }
   }
 }

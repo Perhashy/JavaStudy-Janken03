@@ -18,13 +18,11 @@ public class Hand {
       if (playerHand > 0 && playerHand <= 3) {
         this.hand = playerHand;
       } else {
-        System.out.println("正しくない手を出しました、あなたの負けです");
-        GameController.gameExit();
+        this.hand = 0;
       }
     } catch (InputMismatchException e){
-      System.out.println("---------------------------------");
-      System.out.println("数値以外が入力されました");
-      GameController.gameExit();
+      this.hand = 0;
+      System.out.println("--------じゃんけんぽん！--------");
     }
   }
 
@@ -39,6 +37,7 @@ public class Hand {
 
   public String stringHand() {
     switch (this.hand) {
+      case 0: return "正しくない手を出しました";
       case 1: return "グー";
       case 2: return "チョキ";
       case 3: return "パー";
