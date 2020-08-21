@@ -36,10 +36,7 @@ public class GameController {
     try {
       nextGame = sc.nextInt();
     } catch (InputMismatchException e) {
-      System.out.println("--------------------------------");
-      System.out.println("ゲームを終了します");
-      System.out.println("また遊んでね！");
-      System.exit(0);
+      gameExit();
     }
   }
   public static boolean checkNext() {
@@ -49,5 +46,13 @@ public class GameController {
     } else {
       return false;
     }
+  }
+
+  public static void gameExit() {
+    System.out.println("--------------------------------");
+    System.out.println("ゲームを終了します");
+    System.out.println("また遊んでね！");
+    System.exit(0);
+
   }
 }

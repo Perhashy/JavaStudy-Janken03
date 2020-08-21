@@ -11,10 +11,6 @@ public class Main {
       GameController.game(player, computer);
       GameController.nextGame();
     } while (GameController.checkNext());
-    System.out.println("--------------------------------");
-    System.out.println("ゲームを終了します");
-    System.out.println("また遊んでね！");
-    System.exit(0);
-
+    GameController.gameExit();
   }
 }

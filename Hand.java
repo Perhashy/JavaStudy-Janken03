@@ -19,12 +19,12 @@ public class Hand {
         this.hand = playerHand;
       } else {
         System.out.println("正しくない手を出しました、あなたの負けです");
-        System.exit(0);
+        GameController.gameExit();
       }
     } catch (InputMismatchException e){
       System.out.println("---------------------------------");
-      System.out.println("数値以外が入力されました、ゲームを終了します");
-      System.exit(0);
+      System.out.println("数値以外が入力されました");
+      GameController.gameExit();
     }
   }
 
