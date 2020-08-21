@@ -10,10 +10,12 @@ public class GameController {
   public static void game(Hand player, Hand computer) {
     System.out.println(gameCount + "回目のゲーム！");
 
-    player.setPlayerHand();
-    computer.setComputerHand();
+    do {
+      player.setPlayerHand();
+      computer.setComputerHand();
 
-    System.out.println("あなた：" + player.stringHand());
-    System.out.println("あいて：" +computer.stringHand());
+      System.out.println("あなた：" + player.stringHand());
+      System.out.println("あいて：" +computer.stringHand());
+    } while (Rule.draw(player.getHand(), computer.getHand()));
   }
 }
