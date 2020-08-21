@@ -1,6 +1,7 @@
 package Janken03;
 
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class GameController {
   protected static int winCount = 0;
@@ -31,7 +32,14 @@ public class GameController {
     System.out.println("--------------------------------");
     System.out.println("もう一度遊びますか？");
     System.out.print("(1：はい、2：いいえ)：");
-    nextGame = sc.nextInt();
-    System.out.println(nextGame);
+    try {
+      nextGame = sc.nextInt();
+      System.out.println(nextGame);
+    } catch (InputMismatchException e) {
+      System.out.println("--------------------------------");
+      System.out.println("ゲームを終了します");
+      System.out.println("また遊んでね！");
+      System.exit(0);
+    }
   }
 }
